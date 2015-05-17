@@ -7,14 +7,13 @@ git clone https://github.com/bfam/sbp_projection_operators
 git clone https://github.com/bfam/sbp_projection_2d
 cd sbp_projection_2d
 ```
-To use the DG codes complete the following:
-
-Download and unzip Hesthaven and Warburton's codes version 1.1 from
-<http://www.nudg.org/> in the `sbp_projection` directory and then run
-
+To use the DG with Hesthaven and Warburton's codes (known
+to work with commit 42b078b3b0) complete the following
 ```
+cd sbp_projection
+git clone git@github.com:tcew/nodal-dg.git
 cd sbp_projection_2d/src
-cp ../../Codes1.1/Codes2D/MakeCylinder2D.m MakeCurved2D.m
+cp ../../nodal-dg/Codes1.1/Codes2D/MakeCylinder2D.m MakeCurved2D.m
 patch MakeCurved2D.m < MakeCurved2D.patch
 tar xjf straight_v3.tar.bz
 cd ..
